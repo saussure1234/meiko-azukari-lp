@@ -9,7 +9,7 @@
 <link rel="icon" href="./img/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Klee+One:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{
   --cream:#FBF7EE; --cream2:#F3EEDF; --panel:#ffffff;
@@ -104,15 +104,15 @@ h1.h1 .mk2{color:var(--teal-d)}
 .lead-c b{color:var(--orange-d)}
 
 /* ===== 課題 challenge ===== */
-.probs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:960px;margin:0 auto}
-.pcardq{background:#fff;border-radius:18px;padding:24px 20px;box-shadow:var(--shadow-s);border:1px solid #f1ead9;text-align:center}
-.pcardq .qi{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-.pcardq .qi svg{width:32px;height:32px}
-.pcardq:nth-child(1) .qi{background:#E7F4F1;color:var(--teal-d)}
-.pcardq:nth-child(2) .qi{background:#FCEAD0;color:var(--orange-d)}
-.pcardq:nth-child(3) .qi{background:#FBE7EC;color:var(--pink-d)}
-.pcardq p{margin:0;font-size:15px;font-weight:500;line-height:1.7}
-.pcardq p b{color:var(--pink-d)}
+.probs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px;max-width:900px;margin:6px auto 0}
+.pcardq{position:relative;border-radius:5px;padding:40px 24px 30px;box-shadow:0 10px 22px rgba(120,105,70,.17);text-align:center;transition:transform .2s}
+.pcardq::before{content:"";position:absolute;top:-11px;left:50%;width:92px;height:26px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,255,255,.5);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.pcardq:nth-child(1){background:#FDF0D6;transform:rotate(-2deg)}
+.pcardq:nth-child(2){background:#FCE3EA;transform:rotate(1.5deg)}
+.pcardq:nth-child(3){background:#E2F3ED;transform:rotate(-1.3deg)}
+.pcardq:hover{transform:rotate(0) translateY(-4px)}
+.pcardq p{margin:0;font-family:"Klee One",serif;font-size:16.5px;font-weight:600;line-height:1.95;color:#5b5342}
+.pcardq p b{font-weight:600;color:#3f3a30;text-decoration:underline;text-decoration-color:rgba(224,122,142,.75);text-decoration-thickness:2px;text-underline-offset:3px}
 .bridge{max-width:760px;margin:30px auto 0;text-align:center;font-family:"Zen Maru Gothic";font-weight:700;font-size:19px;color:var(--green-d)}
 .bridge b{color:var(--orange-d)}
 
@@ -340,9 +340,9 @@ h1.h1 .mk2{color:var(--teal-d)}
   <div class="wrap">
     <div class="rib p"><h2 class="zmg">こんなお悩み、ありませんか？</h2></div>
     <div class="probs">
-      <div class="pcardq"><div class="qi"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="4.2"/><path d="M4.5 26c0-4.2 3.4-6.8 7.5-6.8 2 0 3.8.6 5.2 1.7"/><circle cx="23.5" cy="12.5" r="3.4" stroke-dasharray="2.4 2.4"/><path d="M18.6 26.5c.2-3.4 2.4-5.6 5-5.6" stroke-dasharray="2.4 2.4"/></svg></div><p>預かり保育を充実させたいが、<b>人が採れない・担当者が定着しない</b></p></div>
-      <div class="pcardq"><div class="qi"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11.5"/><path d="M9.5 13.3l4 1.9"/><path d="M22.5 13.3l-4 1.9"/><path d="M11.6 22c1.4-1.7 3-1.7 4.4-1.7s3 0 4.4 1.7"/></svg></div><p>急な欠勤を担任が穴埋めしていて、<b>現場が疲弊</b>している</p></div>
-      <div class="pcardq"><div class="qi"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l8 8 4-4 9 9"/><path d="M26 23h-6M26 23v-6"/></svg></div><p>願書数が伸び悩んでおり、<b>預かり保育に対応</b>したい</p></div>
+      <div class="pcardq"><p>預かり保育を充実させたいが、<b>人が採れない・担当者が定着しない</b></p></div>
+      <div class="pcardq"><p>急な欠勤を担任が穴埋めしていて、<b>現場が疲弊</b>している</p></div>
+      <div class="pcardq"><p>願書数が伸び悩んでおり、<b>預かり保育に対応</b>したい</p></div>
     </div>
     <p class="bridge zmg">——実は、そのすべてに<b>“答え”</b>があります。</p>
   </div>
