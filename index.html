@@ -278,29 +278,7 @@ h1.h1 .mk2{color:var(--teal-d)}
   .cimgs{grid-template-columns:1fr}
 }
 
-/* ==== 静的な装飾ドット（アニメなし） ==== */
 .sec{overflow:hidden}
-.sec>.wrap{position:relative;z-index:1}
-.sec::before,.sec::after{content:"";position:absolute;border-radius:50%;z-index:0;pointer-events:none}
-/* セクションごとに色・位置・大きさをバラす（FV風ドット） */
-section.sec:nth-of-type(2)::before{width:46px;height:46px;background:rgba(246,209,104,.6);top:54px;left:5%}
-section.sec:nth-of-type(2)::after{width:22px;height:22px;background:rgba(242,163,179,.6);top:210px;right:8%}
-section.sec:nth-of-type(3)::before{width:30px;height:30px;background:rgba(79,181,166,.5);bottom:76px;left:8%}
-section.sec:nth-of-type(3)::after{width:54px;height:54px;background:rgba(123,196,107,.4);top:46px;right:4%}
-section.sec:nth-of-type(4)::before{width:40px;height:40px;background:rgba(242,163,179,.55);top:66px;right:7%}
-section.sec:nth-of-type(4)::after{width:24px;height:24px;background:rgba(246,209,104,.6);bottom:56px;left:9%}
-section.sec:nth-of-type(5)::before{width:34px;height:34px;background:rgba(123,196,107,.45);top:86px;left:5%}
-section.sec:nth-of-type(5)::after{width:20px;height:20px;background:rgba(79,181,166,.55);bottom:120px;right:6%}
-section.sec:nth-of-type(6)::before{width:30px;height:30px;background:rgba(246,209,104,.6);bottom:70px;right:8%}
-section.sec:nth-of-type(6)::after{width:46px;height:46px;background:rgba(242,163,179,.5);top:40px;left:4%}
-section.sec:nth-of-type(7)::before{width:42px;height:42px;background:rgba(79,181,166,.5);top:58px;right:6%}
-section.sec:nth-of-type(7)::after{width:24px;height:24px;background:rgba(123,196,107,.5);bottom:80px;left:7%}
-section.sec:nth-of-type(8)::before{width:32px;height:32px;background:rgba(242,163,179,.55);bottom:62px;right:7%}
-section.sec:nth-of-type(8)::after{width:40px;height:40px;background:rgba(246,209,104,.55);top:64px;left:5%}
-section.sec:nth-of-type(9)::before{width:44px;height:44px;background:rgba(123,196,107,.42);top:78px;right:5%}
-section.sec:nth-of-type(9)::after{width:22px;height:22px;background:rgba(79,181,166,.55);top:280px;left:7%}
-section.sec:nth-of-type(10)::before{width:36px;height:36px;background:rgba(246,209,104,.55);top:58px;right:8%}
-section.sec:nth-of-type(10)::after{width:26px;height:26px;background:rgba(242,163,179,.55);bottom:70px;left:6%}
 </style>
 </head>
 <body>
