@@ -9,7 +9,7 @@
 <link rel="icon" href="./img/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Klee+One:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --cream:#FBF7EE; --cream2:#F3EEDF; --panel:#ffffff;
@@ -105,13 +105,12 @@ h1.h1 .mk2{color:var(--teal-d)}
 
 /* ===== 課題 challenge ===== */
 .probs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px;max-width:900px;margin:6px auto 0}
-.pcardq{position:relative;border-radius:5px;padding:40px 24px 30px;box-shadow:0 10px 22px rgba(120,105,70,.17);text-align:center;transition:transform .2s}
+.pcardq{position:relative;border-radius:5px;padding:40px 24px 30px;box-shadow:0 10px 22px rgba(120,105,70,.17);text-align:center}
 .pcardq::before{content:"";position:absolute;top:-11px;left:50%;width:92px;height:26px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,255,255,.5);box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .pcardq:nth-child(1){background:#FDF0D6;transform:rotate(-2deg)}
 .pcardq:nth-child(2){background:#FCE3EA;transform:rotate(1.5deg)}
 .pcardq:nth-child(3){background:#E2F3ED;transform:rotate(-1.3deg)}
-.pcardq:hover{transform:rotate(0) translateY(-4px)}
-.pcardq p{margin:0;font-family:"Klee One",serif;font-size:16.5px;font-weight:600;line-height:1.95;color:#5b5342}
+.pcardq p{margin:0;font-size:16px;font-weight:600;line-height:1.9;color:#5b5342}
 .pcardq p b{font-weight:600;color:#3f3a30;text-decoration:underline;text-decoration-color:rgba(224,122,142,.75);text-decoration-thickness:2px;text-underline-offset:3px}
 .bridge{max-width:760px;margin:30px auto 0;text-align:center;font-family:"Zen Maru Gothic";font-weight:700;font-size:19px;color:var(--green-d)}
 .bridge b{color:var(--orange-d)}
@@ -279,37 +278,29 @@ h1.h1 .mk2{color:var(--teal-d)}
   .cimgs{grid-template-columns:1fr}
 }
 
-/* ==== ふんわり動く装飾 ==== */
-@keyframes floatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(11px)}}
-@keyframes swayCard{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(.5deg)}}
-.pdot.a{animation:floatA 6s ease-in-out infinite}
-.pdot.b{animation:floatB 7.5s ease-in-out infinite}
-.pdot.c{animation:floatA 5.5s ease-in-out infinite .8s}
-.pcard{animation:swayCard 9s ease-in-out infinite}
+/* ==== 静的な装飾ドット（アニメなし） ==== */
 .sec{overflow:hidden}
 .sec>.wrap{position:relative;z-index:1}
 .sec::before,.sec::after{content:"";position:absolute;border-radius:50%;z-index:0;pointer-events:none}
 /* セクションごとに色・位置・大きさをバラす（FV風ドット） */
-section.sec:nth-of-type(2)::before{width:46px;height:46px;background:rgba(246,209,104,.6);top:54px;left:5%;animation:floatA 6s ease-in-out infinite}
-section.sec:nth-of-type(2)::after{width:22px;height:22px;background:rgba(242,163,179,.6);top:210px;right:8%;animation:floatB 7.5s ease-in-out infinite}
-section.sec:nth-of-type(3)::before{width:30px;height:30px;background:rgba(79,181,166,.5);bottom:76px;left:8%;animation:floatB 8s ease-in-out infinite}
-section.sec:nth-of-type(3)::after{width:54px;height:54px;background:rgba(123,196,107,.4);top:46px;right:4%;animation:floatA 9s ease-in-out infinite}
-section.sec:nth-of-type(4)::before{width:40px;height:40px;background:rgba(242,163,179,.55);top:66px;right:7%;animation:floatA 6.5s ease-in-out infinite}
-section.sec:nth-of-type(4)::after{width:24px;height:24px;background:rgba(246,209,104,.6);bottom:56px;left:9%;animation:floatB 8.5s ease-in-out infinite}
-section.sec:nth-of-type(5)::before{width:34px;height:34px;background:rgba(123,196,107,.45);top:86px;left:5%;animation:floatB 7s ease-in-out infinite}
-section.sec:nth-of-type(5)::after{width:20px;height:20px;background:rgba(79,181,166,.55);bottom:120px;right:6%;animation:floatA 6s ease-in-out infinite}
-section.sec:nth-of-type(6)::before{width:30px;height:30px;background:rgba(246,209,104,.6);bottom:70px;right:8%;animation:floatA 8s ease-in-out infinite}
-section.sec:nth-of-type(6)::after{width:46px;height:46px;background:rgba(242,163,179,.5);top:40px;left:4%;animation:floatB 10s ease-in-out infinite}
-section.sec:nth-of-type(7)::before{width:42px;height:42px;background:rgba(79,181,166,.5);top:58px;right:6%;animation:floatB 7.5s ease-in-out infinite}
-section.sec:nth-of-type(7)::after{width:24px;height:24px;background:rgba(123,196,107,.5);bottom:80px;left:7%;animation:floatA 6.5s ease-in-out infinite}
-section.sec:nth-of-type(8)::before{width:32px;height:32px;background:rgba(242,163,179,.55);bottom:62px;right:7%;animation:floatA 9s ease-in-out infinite}
-section.sec:nth-of-type(8)::after{width:40px;height:40px;background:rgba(246,209,104,.55);top:64px;left:5%;animation:floatB 8s ease-in-out infinite}
-section.sec:nth-of-type(9)::before{width:44px;height:44px;background:rgba(123,196,107,.42);top:78px;right:5%;animation:floatB 7s ease-in-out infinite}
-section.sec:nth-of-type(9)::after{width:22px;height:22px;background:rgba(79,181,166,.55);top:280px;left:7%;animation:floatA 6s ease-in-out infinite}
-section.sec:nth-of-type(10)::before{width:36px;height:36px;background:rgba(246,209,104,.55);top:58px;right:8%;animation:floatA 8.5s ease-in-out infinite}
-section.sec:nth-of-type(10)::after{width:26px;height:26px;background:rgba(242,163,179,.55);bottom:70px;left:6%;animation:floatB 7.5s ease-in-out infinite}
-@media(prefers-reduced-motion:reduce){.pdot,.pcard,.sec::before,.sec::after{animation:none}}
+section.sec:nth-of-type(2)::before{width:46px;height:46px;background:rgba(246,209,104,.6);top:54px;left:5%}
+section.sec:nth-of-type(2)::after{width:22px;height:22px;background:rgba(242,163,179,.6);top:210px;right:8%}
+section.sec:nth-of-type(3)::before{width:30px;height:30px;background:rgba(79,181,166,.5);bottom:76px;left:8%}
+section.sec:nth-of-type(3)::after{width:54px;height:54px;background:rgba(123,196,107,.4);top:46px;right:4%}
+section.sec:nth-of-type(4)::before{width:40px;height:40px;background:rgba(242,163,179,.55);top:66px;right:7%}
+section.sec:nth-of-type(4)::after{width:24px;height:24px;background:rgba(246,209,104,.6);bottom:56px;left:9%}
+section.sec:nth-of-type(5)::before{width:34px;height:34px;background:rgba(123,196,107,.45);top:86px;left:5%}
+section.sec:nth-of-type(5)::after{width:20px;height:20px;background:rgba(79,181,166,.55);bottom:120px;right:6%}
+section.sec:nth-of-type(6)::before{width:30px;height:30px;background:rgba(246,209,104,.6);bottom:70px;right:8%}
+section.sec:nth-of-type(6)::after{width:46px;height:46px;background:rgba(242,163,179,.5);top:40px;left:4%}
+section.sec:nth-of-type(7)::before{width:42px;height:42px;background:rgba(79,181,166,.5);top:58px;right:6%}
+section.sec:nth-of-type(7)::after{width:24px;height:24px;background:rgba(123,196,107,.5);bottom:80px;left:7%}
+section.sec:nth-of-type(8)::before{width:32px;height:32px;background:rgba(242,163,179,.55);bottom:62px;right:7%}
+section.sec:nth-of-type(8)::after{width:40px;height:40px;background:rgba(246,209,104,.55);top:64px;left:5%}
+section.sec:nth-of-type(9)::before{width:44px;height:44px;background:rgba(123,196,107,.42);top:78px;right:5%}
+section.sec:nth-of-type(9)::after{width:22px;height:22px;background:rgba(79,181,166,.55);top:280px;left:7%}
+section.sec:nth-of-type(10)::before{width:36px;height:36px;background:rgba(246,209,104,.55);top:58px;right:8%}
+section.sec:nth-of-type(10)::after{width:26px;height:26px;background:rgba(242,163,179,.55);bottom:70px;left:6%}
 </style>
 </head>
 <body>
