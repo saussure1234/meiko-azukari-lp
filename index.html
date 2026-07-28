@@ -140,12 +140,14 @@ h1.h1 .mk2{color:var(--teal-d)}
 .stat:nth-child(2) .sv{color:var(--green-d)} .stat:nth-child(3) .sv{font-size:20px}
 
 /* ===== 導入園の声 voice ===== */
-.voice{max-width:940px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:26px;background:#fff;border-radius:22px;padding:22px;box-shadow:var(--shadow);border:1px solid #f1ead9}
-.voice img{border-radius:14px;width:100%;aspect-ratio:16/10;object-fit:cover}
-.voice .vcap{font-size:12.5px;color:var(--ink2);margin-top:12px;text-align:center;font-weight:500;line-height:1.75}
-.voice .vcap-top{margin-top:0;margin-bottom:14px}
-.voice .vc-name{font-family:"Zen Maru Gothic";font-weight:900;font-size:20px;color:var(--green-d)}
-.voice .vc-sub{font-size:12px;color:var(--ink2)}
+.voice{max-width:940px;margin:0 auto;background:#fff;border-radius:22px;padding:26px 30px;box-shadow:var(--shadow);border:1px solid #f1ead9}
+.voice-head{text-align:center;padding-bottom:16px;margin-bottom:22px;border-bottom:1.5px dashed #e7dcc4}
+.voice-head .vh-org{margin:0 0 4px;font-size:13px;color:var(--ink2);font-weight:500}
+.voice-head .vh-name{margin:0;font-family:"Zen Maru Gothic";font-weight:900;font-size:24px;color:var(--green-d);line-height:1.35}
+.voice-head .vh-sama{font-size:15px}
+.voice-head .vh-loc{font-family:"Noto Sans JP";font-size:13px;color:var(--ink2);font-weight:500;margin-left:8px;vertical-align:1px}
+.voice-main{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center}
+.voice-img img{border-radius:14px;width:100%;aspect-ratio:16/10;object-fit:cover}
 .voice .vbody{align-self:center}
 .voice .vbody p{margin:0 0 12px;font-size:14.5px;line-height:1.9}
 .voice .vbody .hl{color:var(--orange-d);font-weight:700}
@@ -237,7 +239,7 @@ h1.h1 .mk2{color:var(--teal-d)}
   .merits,.probs,.stats{grid-template-columns:1fr;gap:22px;max-width:420px}
   .rib h2{font-size:20px;padding:11px 22px}
   .sec{padding:44px 0}
-  .voice{grid-template-columns:1fr;gap:16px}
+  .voice-main{grid-template-columns:1fr;gap:16px}
   .cgrid{grid-template-columns:1fr;gap:16px}
   .flow{grid-template-columns:1fr 1fr;gap:22px 14px}
   .fstep::after{content:"›";right:50%;top:auto;bottom:-18px;transform:translateX(50%) rotate(90deg)}
@@ -369,15 +371,18 @@ h1.h1 .mk2{color:var(--teal-d)}
   <div class="wrap">
     <div class="rib o"><h2 class="zmg">導入園さまの声</h2></div>
     <div class="voice">
-      <div>
-        <p class="vcap vcap-top"><span class="vc-sub">学校法人 八王山学園</span><br><b class="vc-name">あすなろ幼稚園</b>さま<br><span class="vc-sub">東京都葛飾区</span></p>
-        <img src="./img/asunaro-sign.jpg" alt="あすなろ幼稚園の園名看板">
+      <div class="voice-head">
+        <p class="vh-org">学校法人 八王山学園</p>
+        <p class="vh-name">あすなろ幼稚園<span class="vh-sama">さま</span><span class="vh-loc">（東京都葛飾区）</span></p>
       </div>
+      <div class="voice-main">
+      <div class="voice-img"><img src="./img/asunaro-sign.jpg" alt="あすなろ幼稚園の園名看板"></div>
       <div class="vbody">
         <p class="kicker zmg">「三者すべてに利点がありました」</p>
         <p><span class="hl">都内初！外部委託でも行政の預かり保育助成が受けられた</span>ことは、運営費の心配がなく、導入の際の非常に重要なポイントでした。預かり保育担当は通常保育と時間帯が違うため離職率が高く、他職員への負担も大きい等、諦めなければならないことも多くありました。</p>
         <p>でも完全外部委託により、運動会の振替休日に1日預かりを設定できたり、急な欠勤に慌てて園内職員で賄う必要もなくなり、予約管理も委託できて事務業務も軽減。<span class="hl">保護者・職員・運営側の三者全員に利点</span>がありました。明光の先生方との信頼関係を築けたことも大きかったです。</p>
         <p><span class="punch zmg">ココだけの話、ハッキリ言って早いもの勝ちだと思います。</span></p>
+      </div>
       </div>
     </div>
     <div class="vid-wrap" id="ytFacade" role="button" tabindex="0" aria-label="動画を再生：導入園さまインタビュー">
