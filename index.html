@@ -246,6 +246,20 @@ h1.h1 .mk2{color:var(--teal-d)}
   .finalcta .cwrap{padding:18px 20px}
   .finalcta .telb a{font-size:27px}
 }
+
+/* ==== additions: 解決策の写真 / コンテンツ2枚 / 動画埋め込み ==== */
+.sol-intro{display:grid;grid-template-columns:1fr 300px;gap:26px;align-items:center;text-align:left;max-width:900px}
+.sol-intro p{font-size:15.5px}
+.sol-intro .si-img img{border-radius:14px;aspect-ratio:16/10;object-fit:cover;width:100%}
+.cimgs{display:grid;gap:10px}
+.cimgs img{border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.vid-wrap{position:relative;max-width:760px;margin:0 auto 10px;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:#000}
+.vid-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-cap{max-width:760px;margin:0 auto 28px;text-align:center;font-size:12.5px;color:var(--ink2);font-weight:500}
+@media(max-width:860px){
+  .sol-intro{grid-template-columns:1fr;gap:16px;max-width:420px}
+  .cimgs{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
@@ -295,7 +309,7 @@ h1.h1 .mk2{color:var(--teal-d)}
     <div class="probs">
       <div class="pcardq"><div class="qi zmg">?</div><p>預かり保育を充実させたいが、<b>人が採れない・担当者が定着しない</b></p></div>
       <div class="pcardq"><div class="qi zmg">?</div><p>急な欠勤を担任が穴埋めしていて、<b>現場が疲弊</b>している</p></div>
-      <div class="pcardq"><div class="qi zmg">?</div><p>願書数が伸び悩んでおり、<b>預かり保育で選ばれる園</b>にしたい</p></div>
+      <div class="pcardq"><div class="qi zmg">?</div><p>願書数が伸び悩んでおり、<b>預かり保育に対応</b>したい</p></div>
     </div>
     <p class="bridge zmg">——その預かり保育のお悩み、明光への<b>“運営委託”</b>で解決できます。</p>
   </div>
@@ -305,7 +319,10 @@ h1.h1 .mk2{color:var(--teal-d)}
 <section class="sec">
   <div class="wrap">
     <div class="rib"><span class="kicker">SOLUTION</span><h2 class="zmg">明光が“まるごと”運営受託します</h2></div>
-    <div class="sol-intro"><p>個別指導専門塾「<b>明光義塾</b>」やアフタースクール「<b>明光キッズ</b>」を展開する<b>株式会社明光ネットワークジャパン</b>が、幼稚園の預かり保育を運営受託。<b>実績ある専門スタッフ</b>が、責任をもって運営いたします。</p></div>
+    <div class="sol-intro">
+      <div class="si-txt"><p>個別指導専門塾「<b>明光義塾</b>」やアフタースクール「<b>明光キッズ</b>」を展開する<b>株式会社明光ネットワークジャパン</b>が、幼稚園の預かり保育を運営受託。<b>実績ある専門スタッフ</b>が、責任をもって運営いたします。</p></div>
+      <div class="si-img"><img src="./img/sol-care.jpg" alt="専門スタッフによる預かり保育の様子" loading="lazy"></div>
+    </div>
     <p class="subrib zmg">明光に運営委託をするメリット</p>
     <div class="merits">
       <div class="mcard"><span class="num zmg">1</span><h3>専任のスタッフに預かり保育の運営を<b>お任せ</b>いただけます</h3></div>
@@ -334,6 +351,8 @@ h1.h1 .mk2{color:var(--teal-d)}
 <section class="sec">
   <div class="wrap">
     <div class="rib o"><span class="kicker">VOICE</span><h2 class="zmg">導入園さまの声</h2></div>
+    <div class="vid-wrap"><iframe src="https://www.youtube-nocookie.com/embed/ITjPuGzT52E?rel=0" title="あずかり保育運営受託 導入園の声" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <p class="vid-cap">▲ 導入園さまインタビュー動画（明光キッズ公式）</p>
     <div class="voice">
       <div>
         <img src="./img/asunaro-sign.jpg" alt="あすなろ幼稚園の園名看板">
@@ -356,26 +375,28 @@ h1.h1 .mk2{color:var(--teal-d)}
     <div class="cblock steam">
       <span class="ch zmg">スティームタイム</span>
       <div class="cgrid">
-        <img src="./img/steam-magnet.jpg" alt="知育玩具で遊びながら学ぶ園児">
+        <div class="cimgs">
+          <img src="./img/steam-magnet.jpg" alt="知育玩具を使って学ぶ園児" loading="lazy">
+          <img src="./img/content-steam2.jpg" alt="遊ぶように学ぶ園児" loading="lazy">
+        </div>
         <div class="ctxt">
-          <p>身近なものや知育玩具を使い、遊びを楽しみながら<b>STEAM</b>の様々な要素に触れる時間です。お友だちと一緒に楽しみながら取り組むだけで、<b>課題解決能力や創造性</b>を育みます。</p>
-          <div class="agebox">
-            <div class="age"><h4>年少児</h4><p>大きい・小さい、重い・軽い、長い・短いなどを五感で学び、少しずつ協働性も育みます。</p></div>
-            <div class="age"><h4>年中・年長児</h4><p>多くのことに気づける活動に取り組み、数や言葉の概念の習得にもつなげます。</p></div>
-          </div>
+          <p><b>STEAM教育</b>を取り入れた学習コンテンツを提供します。知育玩具を使って、遊ぶように学びながら<b>プログラミング的思考</b>を育みます。</p>
+          <p>プログラミング的思考とは、最適な方法で問題を解決するためにどうすべきか繰り返し考える力のこと。現代で重視される、さまざまな力を楽しみながら育む時間です。</p>
         </div>
       </div>
     </div>
     <div class="cblock chal">
       <span class="ch zmg">チャレンジタイム</span>
       <div class="cgrid">
-        <img src="./img/challenge-write.jpg" alt="プリントで文字や数に取り組む園児">
+        <div class="cimgs">
+          <img src="./img/challenge-write.jpg" alt="プリントで文字や数に取り組む園児" loading="lazy">
+          <img src="./img/content-chal2.jpg" alt="ワークに集中して取り組む園児" loading="lazy">
+        </div>
         <div class="ctxt">
-          <p>色塗りや線なぞりからはじまり、ひらがなや数字を使い思考することを体験して、<b>「まなび＝楽しい」</b>というイメージを持ち、好きになれるよう取り組みます。</p>
+          <p>色を塗ることや線をなぞること、ひらがなや数字の読み書きを通じて、その楽しさを味わいながら<b>学習習慣</b>を身につけていきます。プリントは<b>学年別</b>にご用意します。</p>
           <div class="agebox">
-            <div class="age"><h4>年少児</h4><p>線なぞりや塗り絵で運筆力・色彩感覚を育みます。</p></div>
-            <div class="age"><h4>年中児</h4><p>ひらがな・数字を字形に気を付けて書く力を育てます。</p></div>
-            <div class="age"><h4>年長児</h4><p>短文の音読や数の概念など、小学校に繋がる基礎学力を育みます。</p></div>
+            <div class="age"><h4>年少児</h4><p>なぞりや塗り絵を通し、指先を上手に使いながら、運筆力や色彩感覚を育みます。</p></div>
+            <div class="age"><h4>年長児</h4><p>短文の音読や数の概念、平仮名の書き順など、小学校に繋がる基礎学力を育みます。</p></div>
           </div>
         </div>
       </div>
@@ -394,7 +415,7 @@ h1.h1 .mk2{color:var(--teal-d)}
         <tbody>
           <tr><th>採用・<br>マネジメント</th><td class="own">採用コスト・マネジメント工数が発生</td><td class="meiko">採用・マネジメントを代行</td></tr>
           <tr><th>離職</th><td class="own">離職リスクへの備えが必要</td><td class="meiko">離職リスクを回避</td></tr>
-          <tr><th>コンテンツ</th><td class="own">自園で用意が必要</td><td class="meiko">実績ある明光のコンテンツを提供</td></tr>
+          <tr><th>コンテンツ</th><td class="own">自園で用意が必要</td><td class="meiko">アフタースクールでも実績のある明光のコンテンツを提供</td></tr>
         </tbody>
       </table>
     </div>
