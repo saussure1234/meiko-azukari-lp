@@ -145,6 +145,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .voice{max-width:940px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:26px;background:#fff;border-radius:22px;padding:22px;box-shadow:var(--shadow);border:1px solid #f1ead9}
 .voice img{border-radius:14px;width:100%;aspect-ratio:16/10;object-fit:cover}
 .voice .vcap{font-size:12.5px;color:var(--ink2);margin-top:12px;text-align:center;font-weight:500;line-height:1.75}
+.voice .vcap-top{margin-top:0;margin-bottom:14px}
 .voice .vc-name{font-family:"Zen Maru Gothic";font-weight:900;font-size:20px;color:var(--green-d)}
 .voice .vc-sub{font-size:12px;color:var(--ink2)}
 .voice .vbody{align-self:center}
@@ -203,7 +204,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .faq summary::before{content:"Q";position:absolute;left:16px;top:14px;width:26px;height:26px;background:var(--teal);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
 .faq summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:24px;color:var(--orange);transition:transform .2s}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq .fa{padding:0 20px 18px 52px;font-size:14px;line-height:1.85;color:var(--ink)}
+.faq .fa{padding:0 20px 18px 52px;font-size:14px;line-height:1.85;color:var(--ink);overflow:hidden;transition:height .3s ease}
 .faq .fa b{color:var(--orange-d)}
 
 /* ===== 会社概要 ===== */
@@ -287,12 +288,27 @@ h1.h1 .mk2{color:var(--teal-d)}
 .pdot.c{animation:floatA 5.5s ease-in-out infinite .8s}
 .pcard{animation:swayCard 9s ease-in-out infinite}
 .sec{overflow:hidden}
-.sec::before,.sec::after{content:"";position:absolute;border-radius:50%;z-index:0;pointer-events:none}
-.sec::before{width:150px;height:150px;background:rgba(123,196,107,.06);top:24px;right:-48px;animation:floatB 11s ease-in-out infinite}
-.sec::after{width:92px;height:92px;background:rgba(242,162,74,.07);bottom:32px;left:-30px;animation:floatA 9s ease-in-out infinite}
-.sec.alt::before{background:rgba(79,181,166,.07)}
-.sec.alt::after{background:rgba(242,163,179,.08)}
 .sec>.wrap{position:relative;z-index:1}
+.sec::before,.sec::after{content:"";position:absolute;border-radius:50%;z-index:0;pointer-events:none}
+/* セクションごとに色・位置・大きさをバラす（FV風ドット） */
+section.sec:nth-of-type(2)::before{width:46px;height:46px;background:rgba(246,209,104,.6);top:54px;left:5%;animation:floatA 6s ease-in-out infinite}
+section.sec:nth-of-type(2)::after{width:22px;height:22px;background:rgba(242,163,179,.6);top:210px;right:8%;animation:floatB 7.5s ease-in-out infinite}
+section.sec:nth-of-type(3)::before{width:30px;height:30px;background:rgba(79,181,166,.5);bottom:76px;left:8%;animation:floatB 8s ease-in-out infinite}
+section.sec:nth-of-type(3)::after{width:54px;height:54px;background:rgba(123,196,107,.4);top:46px;right:4%;animation:floatA 9s ease-in-out infinite}
+section.sec:nth-of-type(4)::before{width:40px;height:40px;background:rgba(242,163,179,.55);top:66px;right:7%;animation:floatA 6.5s ease-in-out infinite}
+section.sec:nth-of-type(4)::after{width:24px;height:24px;background:rgba(246,209,104,.6);bottom:56px;left:9%;animation:floatB 8.5s ease-in-out infinite}
+section.sec:nth-of-type(5)::before{width:34px;height:34px;background:rgba(123,196,107,.45);top:86px;left:5%;animation:floatB 7s ease-in-out infinite}
+section.sec:nth-of-type(5)::after{width:20px;height:20px;background:rgba(79,181,166,.55);bottom:120px;right:6%;animation:floatA 6s ease-in-out infinite}
+section.sec:nth-of-type(6)::before{width:30px;height:30px;background:rgba(246,209,104,.6);bottom:70px;right:8%;animation:floatA 8s ease-in-out infinite}
+section.sec:nth-of-type(6)::after{width:46px;height:46px;background:rgba(242,163,179,.5);top:40px;left:4%;animation:floatB 10s ease-in-out infinite}
+section.sec:nth-of-type(7)::before{width:42px;height:42px;background:rgba(79,181,166,.5);top:58px;right:6%;animation:floatB 7.5s ease-in-out infinite}
+section.sec:nth-of-type(7)::after{width:24px;height:24px;background:rgba(123,196,107,.5);bottom:80px;left:7%;animation:floatA 6.5s ease-in-out infinite}
+section.sec:nth-of-type(8)::before{width:32px;height:32px;background:rgba(242,163,179,.55);bottom:62px;right:7%;animation:floatA 9s ease-in-out infinite}
+section.sec:nth-of-type(8)::after{width:40px;height:40px;background:rgba(246,209,104,.55);top:64px;left:5%;animation:floatB 8s ease-in-out infinite}
+section.sec:nth-of-type(9)::before{width:44px;height:44px;background:rgba(123,196,107,.42);top:78px;right:5%;animation:floatB 7s ease-in-out infinite}
+section.sec:nth-of-type(9)::after{width:22px;height:22px;background:rgba(79,181,166,.55);top:280px;left:7%;animation:floatA 6s ease-in-out infinite}
+section.sec:nth-of-type(10)::before{width:36px;height:36px;background:rgba(246,209,104,.55);top:58px;right:8%;animation:floatA 8.5s ease-in-out infinite}
+section.sec:nth-of-type(10)::after{width:26px;height:26px;background:rgba(242,163,179,.55);bottom:70px;left:6%;animation:floatB 7.5s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.pdot,.pcard,.sec::before,.sec::after{animation:none}}
 </style>
 </head>
@@ -386,8 +402,8 @@ h1.h1 .mk2{color:var(--teal-d)}
     <div class="rib o"><h2 class="zmg">導入園さまの声</h2></div>
     <div class="voice">
       <div>
+        <p class="vcap vcap-top"><span class="vc-sub">学校法人 八王山学園</span><br><b class="vc-name">あすなろ幼稚園</b>さま<br><span class="vc-sub">東京都葛飾区</span></p>
         <img src="./img/asunaro-sign.jpg" alt="あすなろ幼稚園の園名看板">
-        <p class="vcap"><span class="vc-sub">学校法人 八王山学園</span><br><b class="vc-name">あすなろ幼稚園</b>さま<br><span class="vc-sub">東京都葛飾区</span></p>
       </div>
       <div class="vbody">
         <p class="kicker zmg">「三者すべてに利点がありました」</p>
@@ -526,5 +542,26 @@ h1.h1 .mk2{color:var(--teal-d)}
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.faq details').forEach(function(d){
+  var sum=d.querySelector('summary'), c=d.querySelector('.fa');
+  if(!sum||!c) return;
+  sum.addEventListener('click',function(e){
+    e.preventDefault();
+    if(d.dataset.anim) return;
+    d.dataset.anim='1';
+    if(d.open){
+      c.style.height=c.scrollHeight+'px';
+      requestAnimationFrame(function(){c.style.height='0px';});
+      c.addEventListener('transitionend',function h(){c.removeEventListener('transitionend',h);d.open=false;c.style.height='';delete d.dataset.anim;},{once:true});
+    }else{
+      d.open=true;
+      c.style.height='0px';
+      requestAnimationFrame(function(){c.style.height=c.scrollHeight+'px';});
+      c.addEventListener('transitionend',function h(){c.removeEventListener('transitionend',h);c.style.height='';delete d.dataset.anim;},{once:true});
+    }
+  });
+});
+</script>
 </body>
 </html>
