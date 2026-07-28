@@ -149,7 +149,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .cblock{max-width:940px;margin:0 auto 26px;background:#fff;border-radius:20px;padding:24px;box-shadow:var(--shadow-s);border:1px solid #f1ead9}
 .cblock .ch{display:inline-block;font-family:"Zen Maru Gothic";font-weight:900;font-size:20px;color:#fff;padding:7px 22px;border-radius:50px;margin-bottom:16px}
 .cblock.steam .ch{background:var(--teal)} .cblock.chal .ch{background:var(--orange)}
-.cgrid{display:grid;grid-template-columns:300px 1fr;gap:22px;align-items:center}
+.cgrid{display:block}
 .cgrid img{border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover}
 .cgrid .ctxt p{margin:0 0 14px;font-size:15px;line-height:1.85}
 .agebox{display:flex;gap:12px;flex-wrap:wrap}
@@ -251,8 +251,9 @@ h1.h1 .mk2{color:var(--teal-d)}
 .sol-intro{display:grid;grid-template-columns:1fr 300px;gap:26px;align-items:center;text-align:left;max-width:900px}
 .sol-intro p{font-size:15.5px}
 .sol-intro .si-img img{border-radius:14px;aspect-ratio:16/10;object-fit:cover;width:100%}
-.cimgs{display:grid;gap:10px}
+.cimgs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
 .cimgs img{border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.ctxt p:first-child{margin-top:0}
 .vid-wrap{position:relative;max-width:760px;margin:0 auto 10px;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:#000;cursor:pointer}
 .vid-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
