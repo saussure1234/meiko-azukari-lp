@@ -265,13 +265,13 @@ h1.h1 .mk2{color:var(--teal-d)}
 .cimgs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
 .cimgs img{border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover}
 .ctxt p:first-child{margin-top:0}
-.vid-wrap{position:relative;max-width:760px;margin:34px auto 10px;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:#000;cursor:pointer}
+.vid-wrap{position:relative;max-width:760px;margin:0 auto 10px;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:#000;cursor:pointer}
 .vid-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .vid-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 8px 22px rgba(0,0,0,.3);transition:transform .15s,background .15s}
 .vid-play::after{content:"";position:absolute;top:50%;left:53%;transform:translate(-50%,-50%);border-style:solid;border-width:14px 0 14px 23px;border-color:transparent transparent transparent var(--cta)}
 .vid-wrap:hover .vid-play,.vid-wrap:focus-visible .vid-play{transform:translate(-50%,-50%) scale(1.08);background:#fff}
-.vid-cap{max-width:760px;margin:0 auto 28px;text-align:center;font-size:12.5px;color:var(--ink2);font-weight:500}
+.vid-cap{max-width:760px;margin:34px auto 10px;text-align:center;font-size:12.5px;color:var(--ink2);font-weight:500}
 @media(max-width:860px){
   .sol-intro{grid-template-columns:1fr;gap:16px;max-width:420px}
 }
@@ -280,6 +280,11 @@ h1.h1 .mk2{color:var(--teal-d)}
 }
 
 .sec{overflow:hidden}
+/* ==== 読みやすさ：文節で自動改行（各画面幅で自然に折り返す） ==== */
+.wrap p,.pcardq p,.mcard h3,.bridge,.vh-name,.age p,.age h4,.fstep p,.cnote,.flow-note,.cblock .ctxt p,.event-lead,.lead-c{word-break:auto-phrase;line-break:strict;text-wrap:pretty}
+/* 手動のレスポンシブ改行ユーティリティ（PC/スマホで出し分け） */
+.sp-br{display:none}
+@media(max-width:560px){.sp-br{display:inline}.pc-br{display:none}}
 </style>
 </head>
 <body>
@@ -385,11 +390,11 @@ h1.h1 .mk2{color:var(--teal-d)}
       </div>
       </div>
     </div>
+    <p class="vid-cap">▼ 導入園さまインタビュー動画（明光キッズ公式）</p>
     <div class="vid-wrap" id="ytFacade" role="button" tabindex="0" aria-label="動画を再生：導入園さまインタビュー">
       <img class="vid-poster" src="./img/video-poster.jpg" alt="導入園さまインタビュー動画（明光キッズ公式）" loading="lazy">
       <span class="vid-play" aria-hidden="true"></span>
     </div>
-    <p class="vid-cap">▲ 導入園さまインタビュー動画（明光キッズ公式）</p>
     <script>
     (function(){var f=document.getElementById('ytFacade');function go(){f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/ITjPuGzT52E?autoplay=1&rel=0" title="導入園さまインタビュー動画" allow="autoplay;encrypted-media;fullscreen;picture-in-picture" allowfullscreen></iframe>';}f.addEventListener('click',go);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});})();
     </script>
