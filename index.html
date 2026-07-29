@@ -200,7 +200,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .fstep p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.7}
 .fstep::after{content:"›";position:absolute;right:-11px;top:28px;font-size:26px;color:var(--orange);font-weight:900;z-index:2}
 .flow .fstep:last-child::after{display:none}
-.flow-detail{max-width:760px;margin:22px auto 0;text-align:center;font-size:13.5px;font-weight:500;color:var(--ink2);line-height:1.85}
+.flow-detail{grid-column:1/-1;max-width:760px;margin:8px auto 0;text-align:center;font-size:13.5px;font-weight:500;color:var(--ink2);line-height:1.85}
 .flow-detail b{color:var(--teal-d)}
 .flow-note{max-width:820px;margin:12px auto 0;text-align:center;font-size:14.5px;font-weight:500;color:var(--ink)}
 .flow-note b{color:var(--orange-d)}
@@ -270,6 +270,12 @@ h1.h1 .mk2{color:var(--teal-d)}
   .tel-box,.btn.big{flex:1 1 100%;text-align:center}
   .flow{grid-template-columns:1fr;max-width:340px}
   .flow .fstep::after{display:none!important}
+  .flow .fstep:nth-child(1){order:1}
+  .flow .fstep:nth-child(2){order:2}
+  .flow .flow-detail{order:3}
+  .flow .fstep:nth-child(3){order:4}
+  .flow .fstep:nth-child(4){order:5}
+  .subrib::before,.subrib::after{display:none}
   .company .row{grid-template-columns:110px 1fr}
   .cmp th,.cmp td{padding:12px 8px;font-size:13px}
   .finalcta .cwrap{padding:18px 20px}
@@ -472,8 +478,8 @@ h1.h1 .mk2{color:var(--teal-d)}
       <div class="fstep"><div class="fn zmg">2</div><h4>面談</h4></div>
       <div class="fstep"><div class="fn zmg">3</div><h4>ご契約</h4></div>
       <div class="fstep"><div class="fn zmg">4</div><h4>運営開始</h4></div>
+      <p class="flow-detail"><b>面談</b>では、預かり人数の目安などをお伺いした上で、体制や費用をご提案します。</p>
     </div>
-    <p class="flow-detail"><b>面談</b>では、預かり人数の目安などをお伺いした上で、体制や費用をご提案します。</p>
     <p class="flow-note">お問い合わせから運営開始まで、<b>おおよそ半年程度</b>の見込みです。<br><b>2027年4月開始</b>をご希望の場合は、準備期間を考慮してお早めにご相談ください。</p>
   </div>
 </section>
