@@ -126,8 +126,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .sol-intro{max-width:820px;margin:0 auto 34px;background:#fff;border-radius:20px;padding:26px 30px;box-shadow:var(--shadow-s);text-align:center;border:1px solid #f1ead9}
 .sol-intro p{margin:0;font-size:16px;font-weight:500}
 .sol-intro b{color:var(--teal-d)}
-.subrib{text-align:center;font-family:"Zen Maru Gothic";font-weight:900;font-size:19px;color:var(--ink);margin:14px 0 36px;letter-spacing:.02em}
-.subrib::before,.subrib::after{content:"";display:inline-block;width:28px;height:2px;background:var(--orange);vertical-align:middle;margin:0 16px 6px}
+.subrib{width:fit-content;max-width:100%;margin:16px auto 34px;text-align:center;font-family:"Zen Maru Gothic";font-weight:900;font-size:18px;color:#fff;background:var(--orange);padding:9px 28px;border-radius:50px;box-shadow:0 7px 16px rgba(222,126,44,.26);letter-spacing:.03em;line-height:1.45}
 
 /* ===== merit cards ===== */
 .merits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 18px;max-width:960px;margin:0 auto}
@@ -200,8 +199,8 @@ h1.h1 .mk2{color:var(--teal-d)}
 .fstep p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.7}
 .fstep::after{content:"›";position:absolute;right:-11px;top:28px;font-size:26px;color:var(--orange);font-weight:900;z-index:2}
 .flow .fstep:last-child::after{display:none}
-.flow-detail{grid-column:1/-1;max-width:760px;margin:8px auto 0;text-align:center;font-size:13.5px;font-weight:500;color:var(--ink2);line-height:1.85}
-.flow-detail b{color:var(--teal-d)}
+.flow-detail{max-width:760px;margin:22px auto 0;text-align:center;font-size:13.5px;font-weight:500;color:var(--ink2);line-height:1.85}
+.flow-detail b{color:var(--orange-d)}
 .flow-note{max-width:820px;margin:12px auto 0;text-align:center;font-size:14.5px;font-weight:500;color:var(--ink)}
 .flow-note b{color:var(--orange-d)}
 
@@ -265,17 +264,14 @@ h1.h1 .mk2{color:var(--teal-d)}
 @media(max-width:560px){
   .hd .tel{display:none}
   .hd .logo img{height:28px}
-  .badges{justify-content:center}
-  .badge{flex:0 0 auto;align-items:center;text-align:center}
+  .badges{justify-content:center;gap:8px}
+  .badge{flex:1 1 calc(50% - 4px);align-items:center;text-align:center;padding:9px 7px}
+  .badge .bv{font-size:13px;white-space:normal}
+  .badge .bv em{font-size:15px}
   .tel-box,.btn.big{flex:1 1 100%;text-align:center}
   .flow{grid-template-columns:1fr;max-width:340px}
   .flow .fstep::after{display:none!important}
-  .flow .fstep:nth-child(1){order:1}
-  .flow .fstep:nth-child(2){order:2}
-  .flow .flow-detail{order:3}
-  .flow .fstep:nth-child(3){order:4}
-  .flow .fstep:nth-child(4){order:5}
-  .subrib::before,.subrib::after{display:none}
+  .subrib{font-size:16px;padding:8px 22px}
   .company .row{grid-template-columns:110px 1fr}
   .cmp th,.cmp td{padding:12px 8px;font-size:13px}
   .finalcta .cwrap{padding:18px 20px}
@@ -478,8 +474,8 @@ h1.h1 .mk2{color:var(--teal-d)}
       <div class="fstep"><div class="fn zmg">2</div><h4>面談</h4></div>
       <div class="fstep"><div class="fn zmg">3</div><h4>ご契約</h4></div>
       <div class="fstep"><div class="fn zmg">4</div><h4>運営開始</h4></div>
-      <p class="flow-detail"><b>面談</b>では、預かり人数の目安などをお伺いした上で、体制や費用をご提案します。</p>
     </div>
+    <p class="flow-detail"><b>面談</b>では、預かり人数の目安などをお伺いした上で、体制や費用をご提案します。</p>
     <p class="flow-note">お問い合わせから運営開始まで、<b>おおよそ半年程度</b>の見込みです。<br><b>2027年4月開始</b>をご希望の場合は、準備期間を考慮してお早めにご相談ください。</p>
   </div>
 </section>
