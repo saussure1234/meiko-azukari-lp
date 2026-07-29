@@ -134,11 +134,10 @@ h1.h1 .mk2{color:var(--teal-d)}
 
 /* ===== 実績 stats ===== */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:940px;margin:0 auto}
-.stat{background:#fff;border-radius:20px;padding:28px 20px;text-align:center;box-shadow:var(--shadow-s);border:2px solid #eae3d0}
-.stat .sl{font-size:13px;color:var(--ink2);font-weight:500;margin-bottom:4px}
-.stat .sv{font-family:"Zen Maru Gothic";font-weight:900;color:var(--teal-d);font-size:24px;line-height:1.3}
-.stat .sv em{font-style:normal;font-size:46px;color:var(--orange-d);vertical-align:-4px;margin:0 2px}
-.stat:nth-child(2) .sv{color:var(--green-d)} .stat:nth-child(3) .sv{font-size:20px}
+.stat{background:#fff;border-radius:20px;padding:26px 22px;text-align:center;box-shadow:var(--shadow-s);border:2px solid #eae3d0;display:flex;align-items:center;justify-content:center;min-height:158px}
+.stat .sv{margin:0;font-family:"Zen Maru Gothic";font-weight:900;color:var(--teal-d);font-size:18px;line-height:1.55}
+.stat .sv em{font-style:normal;font-size:42px;color:var(--orange-d);vertical-align:-4px;margin:0 3px;line-height:1}
+.stat:nth-child(2) .sv{color:var(--green-d)}
 
 /* ===== 導入園の声 voice ===== */
 .voice{max-width:940px;margin:0 auto;background:#fff;border-radius:22px;padding:26px 30px;box-shadow:var(--shadow);border:1px solid #f1ead9}
@@ -186,13 +185,13 @@ h1.h1 .mk2{color:var(--teal-d)}
 .cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
 
 /* ===== フロー ===== */
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:960px;margin:0 auto;align-items:stretch}
-.fstep{position:relative;background:#fff;border-radius:18px;padding:22px 16px;box-shadow:var(--shadow-s);border:1px solid #f1ead9;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:960px;margin:0 auto;align-items:start}
+.fstep{position:relative;background:#fff;border-radius:18px;padding:22px 16px;box-shadow:var(--shadow-s);border:1px solid #f1ead9;text-align:center}
 .fstep .fn{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;font-family:"Zen Maru Gothic";font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:17px}
 .fstep:nth-child(2) .fn{background:var(--orange)} .fstep:nth-child(3) .fn{background:var(--teal)} .fstep:nth-child(4) .fn{background:var(--pink-d)}
 .fstep h4{margin:0 0 6px;font-family:"Zen Maru Gothic";font-weight:700;font-size:16px}
 .fstep p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.7}
-.fstep::after{content:"›";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--orange);font-weight:900;z-index:2}
+.fstep::after{content:"›";position:absolute;right:-11px;top:28px;font-size:26px;color:var(--orange);font-weight:900;z-index:2}
 .flow .fstep:last-child::after{display:none}
 .flow-note{max-width:820px;margin:24px auto 0;text-align:center;font-size:14.5px;font-weight:500;color:var(--ink)}
 .flow-note b{color:var(--orange-d)}
@@ -298,7 +297,7 @@ h1.h1 .mk2{color:var(--teal-d)}
   <div class="wrap hd">
     <p class="logo" style="margin:0"><a href="https://www.meikonet.co.jp/"><img src="./img/logo-meikokids.png" alt="明光キッズ"></a></p>
     <div class="hd-cta">
-      <a class="tel zmg" href="tel:05017903432">050-1790-3432<small>平日 11:00〜19:00</small></a>
+      <a class="tel zmg" href="tel:05017903432">050-1790-3432</a>
       <a class="btn" href="#contact">お問い合わせ</a>
     </div>
   </div>
@@ -322,7 +321,7 @@ h1.h1 .mk2{color:var(--teal-d)}
     </div>
     <div class="hero-cta">
       <div class="tel-box">
-        <span class="tl">まずはお電話でご相談ください（平日11-19時）</span>
+        <span class="tl">まずはお電話でご相談ください</span>
         <a class="tn zmg" href="tel:05017903432">050-1790-3432</a>
       </div>
       <a class="btn big" href="#contact">お問い合わせ</a>
@@ -347,17 +346,17 @@ h1.h1 .mk2{color:var(--teal-d)}
   <div class="wrap">
     <div class="rib"><h2 class="zmg">明光が“まるごと”運営受託します</h2></div>
     <div class="sol-intro">
-      <div class="si-txt"><p>個別指導専門塾「<b>明光義塾</b>」やアフタースクール「<b>明光キッズ</b>」を展開する<b>株式会社明光ネットワークジャパン</b>が、幼稚園の預かり保育を運営受託。<b>実績ある専門スタッフ</b>が、責任をもって運営いたします。</p></div>
+      <div class="si-txt"><p>個別指導専門塾「<b>明光義塾</b>」やアフタースクール「<b>明光キッズ</b>」を展開する<b>株式会社明光ネットワークジャパン</b>が、幼稚園の預かり保育を運営。<b>実績ある専門スタッフ</b>が、責任をもって運営いたします。</p></div>
       <div class="si-img"><img src="./img/care-warm.jpg" alt="スタッフと一緒に取り組む園児" loading="lazy"></div>
     </div>
     <p class="subrib zmg">明光に運営委託をするメリット</p>
     <div class="merits">
-      <div class="mcard"><span class="num zmg">1</span><h3>専任のスタッフに預かり保育の運営を<b>お任せ</b>いただけます</h3></div>
-      <div class="mcard"><span class="num zmg">2</span><h3>幼稚園様のフォーマットに沿って、必要書類等の作成を<b>サポート</b>します</h3></div>
-      <div class="mcard"><span class="num zmg">3</span><h3>「明光の預かり保育」を<b><span class="nb">未就園児の保護者</span>へ告知</b>できます</h3></div>
-      <div class="mcard"><span class="num zmg">4</span><h3>採用コスト、離職リスクは<b>ゼロ</b></h3></div>
-      <div class="mcard"><span class="num zmg">5</span><h3>幼稚園様の方針に沿いながら、<b class="nb">明光のコンテンツ</b>を導入できます</h3></div>
-      <div class="mcard"><span class="num zmg">6</span><h3>現在の預かり保育の流れを汲んだ<b class="nb">カスタマイズ</b>が可能です</h3></div>
+      <div class="mcard"><span class="num zmg">1</span><h3>専任のスタッフに預かり保育の運営をお任せいただけます</h3></div>
+      <div class="mcard"><span class="num zmg">2</span><h3>幼稚園様のフォーマットに沿って、必要書類等の作成をサポートします</h3></div>
+      <div class="mcard"><span class="num zmg">3</span><h3>「明光の預かり保育」を未就園児の保護者へ告知できます</h3></div>
+      <div class="mcard"><span class="num zmg">4</span><h3>採用コスト、離職リスクはゼロ</h3></div>
+      <div class="mcard"><span class="num zmg">5</span><h3>幼稚園様の方針に沿いながら、明光のコンテンツを導入できます</h3></div>
+      <div class="mcard"><span class="num zmg">6</span><h3>現在の預かり保育の流れを汲んだカスタマイズが可能です</h3></div>
     </div>
   </div>
 </section>
@@ -367,9 +366,9 @@ h1.h1 .mk2{color:var(--teal-d)}
   <div class="wrap">
     <div class="rib t"><h2 class="zmg">外部委託でも、この実績。</h2></div>
     <div class="stats">
-      <div class="stat"><div class="sl">2026年4月〜 運営受託</div><div class="sv zmg"><em>17</em>園</div></div>
-      <div class="stat"><div class="sl">導入園の入園願書提出数</div><div class="sv zmg">前年比<em>2</em>倍</div></div>
-      <div class="stat"><div class="sl">外部委託でも</div><div class="sv zmg">行政の預かり保育<br>助成の適用実績<br><span style="font-size:13px;color:var(--ink2)">（都内初の事例も）</span></div></div>
+      <div class="stat"><div class="sv zmg">2026年4月より<br><em>17</em>園受託の実績</div></div>
+      <div class="stat"><div class="sv zmg">入園願書提出数が<br>前年比<em>2</em>倍に</div></div>
+      <div class="stat"><div class="sv zmg">外部委託でも<br>行政助成の適用実績</div></div>
     </div>
   </div>
 </section>
@@ -385,9 +384,9 @@ h1.h1 .mk2{color:var(--teal-d)}
       <div class="voice-main">
       <div class="voice-img"><img src="./img/asunaro-sign.jpg" alt="あすなろ幼稚園の園名看板"></div>
       <div class="vbody">
-        <p><span class="hl">都内初！外部委託でも行政の預かり保育助成が受けられたことは、運営費の心配がなく、導入の際の非常に重要なポイントでした。</span>預かり保育担当は通常保育と時間帯が違うため離職率が高く、他職員への負担も大きい等、諦めなければならないことも多くありました。</p>
-        <p>でも完全外部委託により、運動会の振替休日に1日預かりを設定できたり、急な欠勤に慌てて園内職員で賄う必要もなくなり、予約管理も委託できて事務業務も軽減。<span class="hl">保護者・職員・運営側の三者全員に利点がありました。明光の先生方との信頼関係を築けたことも大きかったです。</span></p>
-        <p><span class="punch zmg">ココだけの話、ハッキリ言って早いもの勝ちだと思います。</span></p>
+        <p><span class="hl">都内初！外部委託でも行政の預かり保育助成が受けられたことは運営費の心配がなく、導入の際の非常に重要なポイントでした。</span>また預かり保育担当は通常保育と時間帯が違うため、どうしても離職率が高い、もしくは他職員への負担が大きい等、預かり保育充実に向け諦めなければならなかったこともたくさんありました。</p>
+        <p>でも完全外部委託により、例えば運動会振替休日に1日預かりを設定できたり、担当者の急な欠勤に慌てて園内職員で賄う必要もなくなったことで運営側の負担が大きく軽減されたり、予約管理も委託できたことで事務業務も軽減されたりなど、<span class="hl">保護者・職員・運営側三者全員に利点がありました。明光の先生方との信頼関係がしっかり築けたことも大きかったです。</span></p>
+        <p><span class="punch zmg">ココだけの話ハッキリ言って早いもの勝ちだと思います</span></p>
       </div>
       </div>
     </div>
@@ -410,8 +409,8 @@ h1.h1 .mk2{color:var(--teal-d)}
       <span class="ch zmg">スティームタイム</span>
       <div class="cgrid">
         <div class="ctxt">
-          <p><b>STEAM教育</b>を取り入れた学習コンテンツを提供します。知育玩具を使って、遊ぶように学びながら<b>プログラミング的思考</b>を育みます。</p>
-          <p>プログラミング的思考とは、最適な方法で問題を解決するためにどうすべきか繰り返し考える力のこと。現代で重視される、さまざまな力を楽しみながら育む時間です。</p>
+          <p>STEAM教育を取り入れた、学習コンテンツを提供します。知育玩具を使って、遊ぶように学びながらプログラミング的思考を育みます。</p>
+          <p>プログラミング的思考とは、最適な方法で問題を解決するためにどうすべきか繰り返し考える力のことで、現代では非常に重視されています。現代で求められるさまざまな力を楽しみながら育む時間です。</p>
         </div>
         <div class="cimgs">
           <img src="./img/steam-magnet.jpg" alt="知育玩具を使って学ぶ園児" loading="lazy">
@@ -423,11 +422,7 @@ h1.h1 .mk2{color:var(--teal-d)}
       <span class="ch zmg">チャレンジタイム</span>
       <div class="cgrid">
         <div class="ctxt">
-          <p>色を塗ることや線をなぞること、ひらがなや数字の読み書きを通じて、その楽しさを味わいながら<b>学習習慣</b>を身につけていきます。プリントは<b>学年別</b>にご用意します。</p>
-          <div class="agebox">
-            <div class="age"><h4>年少児</h4><p>なぞりや塗り絵を通し、指先を上手に使いながら、運筆力や色彩感覚を育みます。</p></div>
-            <div class="age"><h4>年長児</h4><p>短文の音読や数の概念、平仮名の書き順など、小学校に繋がる基礎学力を育みます。</p></div>
-          </div>
+          <p>色を塗ることや線をなぞること、ひらがなや数字の読み書きをすることを通じて、その楽しさを味わいながら、学習習慣を身に付けていきます。プリントは学年別に用意をし、年少児であれば、なぞりや塗り絵を通じ、指先を上手に使い、運筆力や色彩感覚等を育む、年長児であれば短文の音読や数の概念、平仮名の書き順など小学校に繋がる基礎学力を育みます。</p>
         </div>
         <div class="cimgs">
           <img src="./img/challenge-write.jpg" alt="プリントで文字や数に取り組む園児" loading="lazy">
@@ -506,7 +501,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 <section class="finalcta" id="contact">
   <div class="wrap">
     <div class="cwrap">
-      <div class="telb"><span class="l">お申込み・お問合せ（平日11:00〜19:00）</span><a href="tel:05017903432" class="zmg">050-1790-3432</a></div>
+      <div class="telb"><span class="l">お申込み・お問合せ</span><a href="tel:05017903432" class="zmg">050-1790-3432</a></div>
       <a class="btn big" href="#">お問い合わせ</a>
     </div>
   </div>
