@@ -193,7 +193,9 @@ h1.h1 .mk2{color:var(--teal-d)}
 .fstep p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.7}
 .fstep::after{content:"›";position:absolute;right:-11px;top:28px;font-size:26px;color:var(--orange);font-weight:900;z-index:2}
 .flow .fstep:last-child::after{display:none}
-.flow-note{max-width:820px;margin:24px auto 0;text-align:center;font-size:14.5px;font-weight:500;color:var(--ink)}
+.flow-detail{max-width:760px;margin:22px auto 0;text-align:center;font-size:13.5px;font-weight:500;color:var(--ink2);line-height:1.85}
+.flow-detail b{color:var(--teal-d)}
+.flow-note{max-width:820px;margin:12px auto 0;text-align:center;font-size:14.5px;font-weight:500;color:var(--ink)}
 .flow-note b{color:var(--orange-d)}
 
 /* ===== FAQ ===== */
@@ -278,6 +280,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .vid-play::after{content:"";position:absolute;top:50%;left:53%;transform:translate(-50%,-50%);border-style:solid;border-width:14px 0 14px 23px;border-color:transparent transparent transparent var(--cta)}
 .vid-wrap:hover .vid-play,.vid-wrap:focus-visible .vid-play{transform:translate(-50%,-50%) scale(1.08);background:#fff}
 .vid-cap{max-width:760px;margin:34px auto 10px;text-align:center;font-size:12.5px;color:var(--ink2);font-weight:500}
+.vid-cap .vc-lead{display:inline-block;font-size:15px;color:var(--ink);margin-bottom:6px;line-height:1.85}
 @media(max-width:860px){
   .sol-intro{grid-template-columns:1fr;gap:16px;max-width:420px}
 }
@@ -389,7 +392,7 @@ h1.h1 .mk2{color:var(--teal-d)}
       </div>
       </div>
     </div>
-    <p class="vid-cap">▼ 導入園さまインタビュー動画</p>
+    <p class="vid-cap"><span class="vc-lead">実際に「明光の預かり保育」を導入された園さまに、率直なお話を伺いました。</span><br>▼ 導入園さまインタビュー動画</p>
     <div class="vid-wrap" id="ytFacade" role="button" tabindex="0" aria-label="動画を再生：導入園さまインタビュー">
       <img class="vid-poster" src="./img/video-poster.jpg" alt="導入園さまインタビュー動画（明光キッズ公式）" loading="lazy">
       <span class="vid-play" aria-hidden="true"></span>
@@ -456,10 +459,11 @@ h1.h1 .mk2{color:var(--teal-d)}
     <div class="rib"><h2 class="zmg">導入までの流れ</h2></div>
     <div class="flow">
       <div class="fstep"><div class="fn zmg">1</div><h4>お問い合わせ</h4></div>
-      <div class="fstep"><div class="fn zmg">2</div><h4>面談</h4><p>預かり人数の目安などをお伺いした上で、体制や費用をご提案します。</p></div>
+      <div class="fstep"><div class="fn zmg">2</div><h4>面談</h4></div>
       <div class="fstep"><div class="fn zmg">3</div><h4>ご契約</h4></div>
       <div class="fstep"><div class="fn zmg">4</div><h4>運営開始</h4></div>
     </div>
+    <p class="flow-detail"><b>面談</b>では、預かり人数の目安などをお伺いした上で、体制や費用をご提案します。</p>
     <p class="flow-note">お問い合わせから運営開始まで、<b>おおよそ半年程度</b>の見込みです。<br><b>2027年4月開始</b>をご希望の場合は、準備期間を考慮してお早めにご相談ください。</p>
   </div>
 </section>
