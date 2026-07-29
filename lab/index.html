@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>［Enriched Demo］預かり保育 運営委託｜明光</title>
+<link rel="icon" href="./img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Maru+Gothic:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* --- 意図して選んだニュートラル：緑に寄せた温かい和紙 --- */
+  --washi:#FAF6EA; --washi-2:#F1EAD6; --panel:#FFFFFF;
+  --sumi:#332F27;            /* 墨（純グレーでない温黒） */
+  --sumi-2:#726B5C;
+  /* --- 大胆さは2色だけ：若葉の緑（信頼）＋柿色（温かさ/行動） --- */
+  --wakaba:#5F9B57; --wakaba-d:#48783F; --wakaba-t:#E9F1E4;
+  --kaki:#DE7B36; --kaki-d:#C0631D; --kaki-t:#FBECDD;
+  --line:#E6DEC9;
+  --shadow-s:0 1px 3px rgba(74,64,38,.05), 0 8px 22px rgba(74,64,38,.07);
+  --shadow-m:0 3px 10px rgba(74,64,38,.07), 0 22px 46px rgba(74,64,38,.13);
+  --ease:cubic-bezier(.2,.8,.25,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Zen Kaku Gothic New",sans-serif;color:var(--sumi);
+  background:var(--washi);line-height:1.85;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.maru{font-family:"Zen Maru Gothic",sans-serif}
+.mincho{font-family:"Shippori Mincho",serif}
+.nb{white-space:nowrap}
+
+/* ===== buttons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:"Zen Maru Gothic";font-weight:700;font-size:15px;border-radius:999px;
+  padding:13px 26px;white-space:nowrap;cursor:pointer;
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s}
+.btn-ic{width:1.05em;height:1.05em;flex:none}
+.btn-ic svg{width:100%;height:100%;fill:currentColor;display:block}
+.btn-primary{background:var(--kaki);color:#fff;box-shadow:0 5px 15px rgba(192,99,29,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(192,99,29,.38)}
+.btn-ghost{background:var(--panel);color:var(--wakaba-d);border:1.5px solid #cfe0c8;box-shadow:var(--shadow-s)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--wakaba);background:var(--wakaba-t)}
+.btn.big{font-size:16.5px;padding:16px 30px}
+.hd .btn{padding:10px 18px;font-size:14px}
+:focus-visible{outline:3px solid var(--kaki);outline-offset:2px;border-radius:6px}
+
+/* ===== header ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,234,.85);
+  backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px}
+.hd .logo img{height:34px;width:auto}
+.hd-cta{display:flex;gap:12px;align-items:center}
+
+/* ===== hero ===== */
+.hero{position:relative;overflow:hidden}
+.hero::before{ /* 若葉のかすかな光。純色ブロックでなく主役写真側に寄せる */
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(58% 55% at 82% 30%, rgba(95,155,87,.14), transparent 70%),
+    radial-gradient(42% 45% at 12% 88%, rgba(222,123,54,.10), transparent 70%);}
+.hero::after{ /* 極薄の青海波（和のテクスチャ）を地に敷く。装飾でなく"和紙感" */
+  content:"";position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='18' viewBox='0 0 54 18'%3E%3Cg fill='none' stroke='%23c9bd9c' stroke-width='1' opacity='.35'%3E%3Cpath d='M0 18 A9 9 0 0 1 18 18 A9 9 0 0 1 36 18 A9 9 0 0 1 54 18'/%3E%3Cpath d='M-9 9 A9 9 0 0 1 9 9 M27 9 A9 9 0 0 1 45 9'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:54px 18px;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 60%);mask-image:linear-gradient(180deg,transparent,#000 60%)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.06fr .94fr;
+  grid-template-areas:"copy media" "cta media";column-gap:56px;row-gap:26px;align-items:center;padding:72px 24px 84px}
+.hero-copy{grid-area:copy;max-width:560px}
+.hero-media{grid-area:media}
+.hero-cta{grid-area:cta}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:"Shippori Mincho";
+  font-weight:700;font-size:14px;letter-spacing:.13em;color:var(--wakaba-d);margin:0 0 26px}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--wakaba);display:inline-block}
+.eyebrow b{color:var(--kaki-d);font-weight:800}
+
+.hero-h1{font-family:"Zen Maru Gothic";font-weight:900;font-size:clamp(32px,4.6vw,52px);
+  line-height:1.42;letter-spacing:.005em;margin:0 0 30px;text-wrap:balance}
+.hero-h1 .grn{color:var(--wakaba-d)}
+.hero-h1 .mark{position:relative;color:var(--sumi);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 22' preserveAspectRatio='none'%3E%3Cpath d='M5 15 C55 7 120 8 196 11' stroke='%23DE7B36' stroke-width='9' stroke-linecap='round' fill='none' opacity='.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center 92%;background-size:100% .42em;padding-bottom:.02em}
+
+/* proof strip：バッジを一体の"実績帯"に */
+.proof{display:inline-flex;align-items:center;gap:22px;background:var(--panel);
+  border:1px solid var(--line);border-radius:16px;padding:14px 24px;box-shadow:var(--shadow-s);margin:0}
+.proof .num{font-family:"Zen Maru Gothic";font-weight:900;font-size:38px;color:var(--kaki);line-height:.9;vertical-align:-3px}
+.proof .u{font-family:"Zen Maru Gothic";font-weight:900;font-size:16px;color:var(--sumi);margin-left:2px}
+.proof-i{display:flex;align-items:baseline;gap:2px}
+.proof .lbl{font-family:"Zen Maru Gothic";font-weight:700;font-size:15px;color:var(--sumi);line-height:1.35}
+.proof-div{width:1px;align-self:stretch;background:var(--line)}
+
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+/* photo：黄ばみ和紙のマット＋層状の柔らかい影。装飾ドット/括弧は撤去し、若葉ひとつだけ */
+.hero-media{position:relative}
+.photo{position:relative;background:var(--panel);padding:12px;border-radius:24px;
+  box-shadow:var(--shadow-m);transform:rotate(-1deg)}
+.photo::before{content:"";position:absolute;inset:12px;border:1px solid rgba(51,47,39,.08);border-radius:15px;z-index:2;pointer-events:none}
+.photo img{border-radius:16px;width:100%;aspect-ratio:4/4.5;object-fit:cover}
+.leaf{position:absolute;width:74px;height:74px;top:-26px;right:-18px;z-index:3;transform:rotate(12deg);
+  filter:drop-shadow(0 6px 10px rgba(74,64,38,.14))}
+.dab{position:absolute;z-index:0;border-radius:50%}
+.dab.a{width:120px;height:120px;background:var(--wakaba-t);bottom:-30px;left:-34px}
+.dab.b{width:70px;height:70px;background:var(--kaki-t);top:40px;right:-30px}
+
+/* ===== 課題 ===== */
+.sec{position:relative;padding:92px 0}
+.sec.alt{background:linear-gradient(180deg,var(--washi),#F6F0E0)}
+.eyebrow-c{text-align:center;font-family:"Shippori Mincho";font-weight:700;font-size:14px;
+  letter-spacing:.16em;color:var(--kaki-d);margin:0 0 12px}
+.sec-h2{text-align:center;font-family:"Zen Maru Gothic";font-weight:900;
+  font-size:clamp(24px,3.4vw,33px);color:var(--sumi);margin:0 0 52px;line-height:1.4;text-wrap:balance}
+.sec-h2 .u{background:linear-gradient(transparent 66%,rgba(222,123,54,.24) 0);padding:0 .1em}
+
+.probs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:960px;margin:0 auto}
+.card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;
+  padding:34px 26px 30px;box-shadow:var(--shadow-s);display:flex;flex-direction:column;
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-m)}
+.card .q{position:absolute;top:-16px;left:24px;width:44px;height:44px;border-radius:13px;
+  display:grid;place-items:center;font-family:"Shippori Mincho";font-weight:800;font-size:22px;color:#fff;
+  box-shadow:0 6px 14px rgba(74,64,38,.16);transform:rotate(-4deg)}
+.card:nth-child(1) .q{background:var(--wakaba)}
+.card:nth-child(2) .q{background:var(--kaki)}
+.card:nth-child(3) .q{background:var(--wakaba-d)}
+.card p{margin:10px 0 0;font-size:16px;line-height:1.95;color:var(--sumi)}
+.card b{font-weight:700;color:var(--sumi);
+  background:linear-gradient(transparent 62%,rgba(95,155,87,.22) 0)}
+
+/* ===== 登場アニメ（控えめ・reduced-motion尊重） ===== */
+.rise{opacity:0;transform:translateY(16px);animation:rise .7s var(--ease) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}}
+
+/* ===== responsive ===== */
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr;grid-template-areas:"copy" "media" "cta";row-gap:26px;padding:44px 24px 56px}
+  .hero-media{max-width:360px;margin:0 auto}
+  .hero-copy{max-width:none}
+  .hero-cta .btn{flex:1 1 auto}
+}
+@media(max-width:620px){
+  .hd .btn.ghost-hd{display:none}
+  .probs{grid-template-columns:1fr;max-width:420px;gap:30px}
+  .proof{width:100%;justify-content:center}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%}
+  .sec{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <p class="logo" style="margin:0"><a href="#"><img src="./img/logo-meikokids.png" alt="明光キッズ"></a></p>
+    <div class="hd-cta">
+      <a class="btn btn-ghost ghost-hd" href="tel:05017903432"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>電話</a>
+      <a class="btn btn-primary" href="#contact">お問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== FV（エンリッチ版） ===== -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow rise d1"><b>2027年4月開始</b>・先着5園限定</p>
+      <h1 class="hero-h1 rise d2"><span class="nb">採用コスト・</span><wbr><span class="nb"><span class="grn">離職リスクゼロ</span>で、</span><br><span class="nb"><span class="mark">“預かり保育”</span>を実現。</span></h1>
+      <div class="proof rise d3">
+        <div class="proof-i"><span class="num">17</span><span class="u">園</span><span class="lbl" style="margin-left:6px">受託の実績</span></div>
+        <div class="proof-div"></div>
+        <span class="lbl">プライム上場企業が運営</span>
+      </div>
+    </div>
+    <div class="hero-cta rise d4">
+      <a class="btn btn-primary big" href="tel:05017903432"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>電話</a>
+      <a class="btn btn-ghost big" href="#contact">お問い合わせ</a>
+    </div>
+    <div class="hero-media rise d3">
+      <span class="dab a" aria-hidden="true"></span><span class="dab b" aria-hidden="true"></span>
+      <div class="photo">
+        <img src="./img/fv-boy.jpg" alt="預かり保育で知育遊びに取り組む園児">
+      </div>
+      <svg class="leaf" viewBox="0 0 48 48" aria-hidden="true"><path d="M40 8C22 8 8 22 8 40c0 0 0-1 0 0 18 0 32-14 32-32z" fill="#7FBF6E"/><path d="M13 35C20 27 30 18 38 11" stroke="#4E8542" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 課題（エンリッチ版） ===== -->
+<section class="sec alt">
+  <div class="wrap">
+    <p class="eyebrow-c">Q&#46; よくいただくお悩み</p>
+    <h2 class="sec-h2">こんなお悩み、<span class="u">ありませんか？</span></h2>
+    <div class="probs">
+      <div class="card"><span class="q" aria-hidden="true">Q</span><p>預かり保育を充実させたいが、<br class="sp-br"><b>人が採れない・担当者が定着しない</b></p></div>
+      <div class="card"><span class="q" aria-hidden="true">Q</span><p>急な欠勤を担任が穴埋めしていて、<br class="sp-br"><b>現場が疲弊している</b></p></div>
+      <div class="card"><span class="q" aria-hidden="true">Q</span><p>願書数が伸び悩んでおり、<br class="sp-br"><b>預かり保育に対応したい</b></p></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
