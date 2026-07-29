@@ -46,8 +46,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hd{display:flex;align-items:center;justify-content:space-between;height:64px}
 .hd .logo img{height:34px;width:auto}
 .hd .hd-cta{display:flex;align-items:center;gap:14px}
-.hd .tel{font-family:"Zen Maru Gothic";font-weight:900;color:var(--teal-d);font-size:19px;text-decoration:none;line-height:1}
-.hd .tel small{display:block;font-family:"Noto Sans JP";font-weight:500;color:var(--ink2);font-size:10.5px;letter-spacing:.02em}
+.hd .tel{font-family:"Zen Maru Gothic";font-weight:900;color:var(--teal-d);text-decoration:none;line-height:1.2;text-align:right}
+.hd .tel .tw{display:block;font-size:13.5px;color:var(--teal-d)}
+.hd .tel small{display:block;font-family:"Noto Sans JP";font-weight:700;color:var(--ink2);font-size:12px;letter-spacing:.02em;line-height:1.3}
 .btn{display:inline-block;background:var(--cta);color:#fff;font-family:"Zen Maru Gothic";font-weight:700;text-decoration:none;border-radius:50px;padding:11px 22px;box-shadow:0 6px 14px rgba(242,135,47,.32);transition:transform .12s,box-shadow .12s;white-space:nowrap}
 .btn:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(242,135,47,.4)}
 .hd .btn{font-size:14px;padding:10px 18px}
@@ -76,9 +77,9 @@ h1.h1 .mk2{color:var(--teal-d)}
 .badge .bv{font-family:"Zen Maru Gothic";font-weight:900;font-size:17px;color:var(--teal-d);line-height:1.25}
 .badge .bv em{font-style:normal;color:var(--orange-d);font-size:21px}
 .hero-cta{grid-area:cta;margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
-.tel-box{background:#fff;border:2px solid var(--teal);border-radius:16px;padding:8px 18px;box-shadow:var(--shadow-s)}
-.tel-box .tl{font-size:11px;color:var(--ink2);font-weight:500}
-.tel-box .tn{font-family:"Zen Maru Gothic";font-weight:900;font-size:26px;color:var(--teal-d);text-decoration:none;letter-spacing:.01em;line-height:1.1;display:block}
+.tel-box{background:#fff;border:2px solid var(--teal);border-radius:16px;padding:9px 20px;box-shadow:var(--shadow-s);text-decoration:none;text-align:center}
+.tel-box .tb-l{font-family:"Zen Maru Gothic";font-weight:900;font-size:16.5px;color:var(--teal-d);display:block;line-height:1.35}
+.tel-box .tb-n{font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;color:var(--ink2);display:block;line-height:1.2;letter-spacing:.02em}
 .btn.big{font-size:16px;padding:15px 30px}
 .hero-photo{position:relative}
 .pcard{position:relative;background:#fff;border-radius:22px;padding:12px;box-shadow:var(--shadow);transform:rotate(-1.2deg)}
@@ -224,9 +225,9 @@ h1.h1 .mk2{color:var(--teal-d)}
 .finalcta h2{font-family:"Zen Maru Gothic";font-weight:900;font-size:28px;margin:0 0 6px}
 .finalcta .sub{font-weight:500;margin:0 0 22px;font-size:15px;opacity:.95}
 .finalcta .cwrap{display:inline-flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:center;background:#fff;border-radius:22px;padding:22px 30px;box-shadow:0 14px 34px rgba(0,0,0,.16)}
-.finalcta .telb{text-align:left}
-.finalcta .telb .l{font-size:12px;color:var(--ink2);font-weight:500}
-.finalcta .telb a{font-family:"Zen Maru Gothic";font-weight:900;font-size:32px;color:var(--teal-d);text-decoration:none;display:block;line-height:1.1}
+.finalcta .telb{text-align:center;text-decoration:none;display:block}
+.finalcta .telb .l{font-family:"Zen Maru Gothic";font-weight:900;font-size:19px;color:var(--teal-d);display:block;line-height:1.35}
+.finalcta .telb .tnum{font-family:"Zen Maru Gothic";font-weight:700;font-size:16px;color:var(--ink2);display:block;line-height:1.2;letter-spacing:.02em}
 
 /* ===== footer ===== */
 .foot{background:#4b4a45;color:#dcd8cf;padding:26px 0;text-align:center;font-size:12.5px;line-height:1.9}
@@ -300,7 +301,7 @@ h1.h1 .mk2{color:var(--teal-d)}
   <div class="wrap hd">
     <p class="logo" style="margin:0"><a href="https://www.meikonet.co.jp/"><img src="./img/logo-meikokids.png" alt="明光キッズ"></a></p>
     <div class="hd-cta">
-      <a class="tel zmg" href="tel:05017903432">050-1790-3432</a>
+      <a class="tel zmg" href="tel:05017903432"><span class="tw">お電話でのお問い合わせ</span><small>050-1790-3432</small></a>
       <a class="btn" href="#contact">お問い合わせ</a>
     </div>
   </div>
@@ -323,9 +324,10 @@ h1.h1 .mk2{color:var(--teal-d)}
       <div class="pcard"><img src="./img/fv-boy.jpg" alt="預かり保育で知育遊びに取り組む園児"></div>
     </div>
     <div class="hero-cta">
-      <div class="tel-box">
-        <a class="tn zmg" href="tel:05017903432">050-1790-3432</a>
-      </div>
+      <a class="tel-box" href="tel:05017903432">
+        <span class="tb-l zmg">お電話でのお問い合わせ</span>
+        <span class="tb-n zmg">050-1790-3432</span>
+      </a>
       <a class="btn big" href="#contact">お問い合わせ</a>
     </div>
   </div>
@@ -504,7 +506,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 <section class="finalcta" id="contact">
   <div class="wrap">
     <div class="cwrap">
-      <div class="telb"><span class="l">お申込み・お問合せ</span><a href="tel:05017903432" class="zmg">050-1790-3432</a></div>
+      <a class="telb" href="tel:05017903432"><span class="l zmg">お電話でのお問い合わせ</span><span class="tnum zmg">050-1790-3432</span></a>
       <a class="btn big" href="#">お問い合わせ</a>
     </div>
   </div>
