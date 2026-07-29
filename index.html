@@ -54,6 +54,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hd .tel small{font-family:"Zen Maru Gothic";font-weight:900;color:var(--teal-d);font-size:15px;letter-spacing:.01em}
 .btn{display:inline-block;background:var(--cta);color:#fff;font-family:"Zen Maru Gothic";font-weight:700;text-decoration:none;border-radius:50px;padding:11px 22px;box-shadow:0 6px 14px rgba(242,135,47,.32);transition:transform .12s,box-shadow .12s;white-space:nowrap}
 .btn:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(242,135,47,.4)}
+.btn.call{background:var(--teal);box-shadow:0 6px 14px rgba(79,181,166,.32)}
+.btn.call:hover{box-shadow:0 9px 20px rgba(79,181,166,.42)}
+.btn .btn-ic{display:inline-block;width:1.05em;height:1.05em;vertical-align:-2px;margin-right:7px}
+.btn .btn-ic svg{width:100%;height:100%;display:block;fill:currentColor}
 .hd .btn{font-size:14px;padding:10px 18px}
 
 /* ===== hero ===== */
@@ -262,13 +266,13 @@ h1.h1 .mk2{color:var(--teal-d)}
   .flow .fstep:nth-child(2)::after{display:none}
 }
 @media(max-width:560px){
-  .hd .tel{display:none}
+  .hd .call{display:none}
   .hd .logo img{height:28px}
   .badges{justify-content:center;gap:8px}
   .badge{flex:1 1 calc(50% - 4px);align-items:center;text-align:center;padding:9px 7px}
   .badge .bv{font-size:13px;white-space:normal}
   .badge .bv em{font-size:15px}
-  .tel-box,.btn.big{flex:1 1 100%;text-align:center}
+  .btn.big{flex:1 1 100%;text-align:center}
   .flow{grid-template-columns:1fr;max-width:340px}
   .flow .fstep::after{display:none!important}
   .subrib{font-size:16px;padding:8px 22px}
@@ -311,7 +315,7 @@ h1.h1 .mk2{color:var(--teal-d)}
   <div class="wrap hd">
     <p class="logo" style="margin:0"><a href="https://www.meikonet.co.jp/"><img src="./img/logo-meikokids.png" alt="明光キッズ"></a></p>
     <div class="hd-cta">
-      <a class="tel zmg" href="tel:05017903432"><span class="tel-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span><span class="tel-meta"><span class="tw">電話</span><small>050-1790-3432</small></span></a>
+      <a class="btn call" href="tel:05017903432"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>電話</a>
       <a class="btn" href="#contact">お問い合わせ</a>
     </div>
   </div>
@@ -334,10 +338,7 @@ h1.h1 .mk2{color:var(--teal-d)}
       <div class="pcard"><img src="./img/fv-boy.jpg" alt="預かり保育で知育遊びに取り組む園児"></div>
     </div>
     <div class="hero-cta">
-      <a class="tel-box" href="tel:05017903432">
-        <span class="tel-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
-        <span class="tel-meta"><span class="tb-l">電話</span><span class="tb-n zmg">050-1790-3432</span></span>
-      </a>
+      <a class="btn big call" href="tel:05017903432"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>電話</a>
       <a class="btn big" href="#contact">お問い合わせ</a>
     </div>
   </div>
@@ -516,7 +517,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 <section class="finalcta" id="contact">
   <div class="wrap">
     <div class="cwrap">
-      <a class="telb" href="tel:05017903432"><span class="tel-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span><span class="tel-meta"><span class="l">電話</span><span class="tnum zmg">050-1790-3432</span></span></a>
+      <a class="btn big call" href="tel:05017903432"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>電話</a>
       <a class="btn big" href="#">お問い合わせ</a>
     </div>
   </div>
