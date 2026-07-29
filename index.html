@@ -230,6 +230,10 @@ h1.h1 .mk2{color:var(--teal-d)}
 /* ===== footer ===== */
 .foot{background:#4b4a45;color:#dcd8cf;padding:26px 0;text-align:center;font-size:12.5px;line-height:1.9}
 .foot a{color:#f2d9b6;text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.foot .foot-nav{margin-bottom:10px;font-weight:500}
+.foot .sep{margin:0 12px;color:#7d786f}
+.foot .foot-copy{margin:0;color:#9e988e;font-size:11.5px}
 
 /* ===== responsive ===== */
 @media(max-width:860px){
@@ -512,8 +516,12 @@ h1.h1 .mk2{color:var(--teal-d)}
 
 <footer class="foot">
   <div class="wrap">
-    株式会社明光ネットワークジャパン（東証プライム 4668）<br>
-    <a href="https://www.meikonet.co.jp/ja/corporate/outline.html" target="_blank" rel="noopener">会社概要</a>　｜　お問い合わせ：<a href="tel:05017903432">050-1790-3432</a>
+    <nav class="foot-nav">
+      <a href="https://www.meikonet.co.jp/ja/corporate.html" target="_blank" rel="noopener">運営会社</a>
+      <span class="sep">｜</span>
+      <a href="https://www.meikonet.co.jp/ja/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+    </nav>
+    <p class="foot-copy">株式会社明光ネットワークジャパン（東証プライム 4668）</p>
   </div>
 </footer>
 
