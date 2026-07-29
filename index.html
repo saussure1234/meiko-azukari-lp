@@ -58,7 +58,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
   radial-gradient(circle at 88% 12%, rgba(242,162,74,.16), transparent 40%),
   radial-gradient(circle at 78% 92%, rgba(79,181,166,.14), transparent 45%),
   var(--cream)}
-.hero-in{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"main photo" "cta photo";column-gap:34px;align-items:center;padding:34px 0 46px}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"main photo" "cta photo";column-gap:34px;align-items:center;padding:34px 22px 46px}
 .hero-main{grid-area:main}
 .hero-photo{grid-area:photo}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--green);color:var(--green-d);font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;padding:7px 16px;border-radius:50px;box-shadow:var(--shadow-s)}
@@ -233,7 +233,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 /* ===== responsive ===== */
 @media(max-width:860px){
   h1.h1{font-size:29px}
-  .hero-in{grid-template-columns:1fr;grid-template-areas:"main" "photo" "cta";gap:18px;padding:22px 0 34px}
+  .hero-in{grid-template-columns:1fr;grid-template-areas:"main" "photo" "cta";gap:18px;padding:22px 22px 34px}
   .hero-photo{max-width:340px;margin:0 auto}
   .hero-cta{margin-top:2px}
   .merits,.probs,.stats{grid-template-columns:1fr;gap:22px;max-width:420px}
