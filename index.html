@@ -17,7 +17,7 @@
   --green:#7BC46B; --green-d:#57A046;
   --orange:#F2A24A; --orange-d:#DE7E2C;
   --teal:#73BD69; --teal-d:#4D8A42;
-  --yellow:#F2A24A; --pink:#F5B583; --pink-d:#DE7E2C;
+  --yellow:#F3C24C; --pink:#F5B583; --pink-d:#DE7E2C;
   --cta:#F2872F; --cta-d:#D96D14;
   --shadow:0 10px 30px rgba(120,105,70,.12);
   --shadow-s:0 4px 14px rgba(120,105,70,.10);
@@ -58,8 +58,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .btn.call:hover{box-shadow:0 9px 20px rgba(87,160,70,.40)}
 .btn .btn-ic{display:inline-block;width:1.05em;height:1.05em;vertical-align:-2px;margin-right:7px}
 .btn .btn-ic svg{width:100%;height:100%;display:block;fill:currentColor}
-.tel-hours{flex-basis:100%;font-size:12.5px;font-weight:500;color:var(--ink2);margin:8px 0 0}
-.finalcta .tel-hours{color:rgba(255,255,255,.92);text-align:center;margin:14px 0 0}
+.tel-hours{flex-basis:100%;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--green-d);margin:11px 0 0;letter-spacing:.03em}
+.tel-hours .th-ic{width:15px;height:15px;color:var(--green);flex:none;display:inline-flex}
+.tel-hours .th-ic svg{width:100%;height:100%;display:block}
+.finalcta .tel-hours{justify-content:center;color:#fff;margin:14px 0 0}
+.finalcta .tel-hours .th-ic{color:rgba(255,255,255,.9)}
 .hd .btn{font-size:14px;padding:10px 18px}
 
 /* ===== hero ===== */
@@ -122,7 +125,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .pcardq{position:relative;border-radius:5px;padding:30px 24px 30px;box-shadow:0 10px 22px rgba(120,105,70,.17);text-align:center;display:flex;flex-direction:column;justify-content:center}
 .pcardq:nth-child(1){background:#E9F2DD;transform:rotate(-2deg)}
 .pcardq:nth-child(2){background:#FBEAD5;transform:rotate(1.5deg)}
-.pcardq:nth-child(3){background:#E1ECD6;transform:rotate(-1.3deg)}
+.pcardq:nth-child(3){background:#F5EDC9;transform:rotate(-1.3deg)}
 .pcardq p{margin:0;font-size:16px;font-weight:600;line-height:1.9;color:#5b5342}
 .pcardq p b{font-weight:600;color:#3f3a30;text-decoration:underline;text-decoration-color:rgba(222,126,44,.6);text-decoration-thickness:2px;text-underline-offset:3px}
 .bridge{max-width:760px;margin:30px auto 0;text-align:center;font-family:"Zen Maru Gothic";font-weight:700;font-size:19px;color:var(--green-d)}
@@ -138,9 +141,9 @@ h1.h1 .mk2{color:var(--teal-d)}
 .merits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 18px;max-width:960px;margin:0 auto}
 .mcard{position:relative;background:#fff;border-radius:18px;padding:26px 20px 22px;box-shadow:var(--shadow-s);border:1px solid #E4EDD8}
 .mcard .num{position:absolute;top:-16px;left:20px;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Zen Maru Gothic";font-weight:900;font-size:19px;color:#fff;box-shadow:0 5px 12px rgba(120,105,70,.22)}
-.mcard:nth-child(6n+1) .num{background:var(--green)} .mcard:nth-child(6n+2) .num{background:var(--orange)}
-.mcard:nth-child(6n+3) .num{background:var(--teal)} .mcard:nth-child(6n+4) .num{background:var(--pink-d)}
-.mcard:nth-child(6n+5) .num{background:var(--yellow);color:#fff} .mcard:nth-child(6n+6) .num{background:var(--green-d)}
+.mcard:nth-child(3n+1) .num{background:var(--green)}
+.mcard:nth-child(3n+2) .num{background:var(--orange)}
+.mcard:nth-child(3n) .num{background:var(--yellow);color:#6b4e12}
 .mcard h3{font-family:"Zen Maru Gothic";font-weight:700;font-size:16px;line-height:1.6;margin:6px 0 0}
 .mcard h3 b{color:var(--orange-d)}
 
@@ -200,7 +203,7 @@ h1.h1 .mk2{color:var(--teal-d)}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:960px;margin:0 auto;align-items:start}
 .fstep{position:relative;background:#fff;border-radius:18px;padding:22px 16px;box-shadow:var(--shadow-s);border:1px solid #E4EDD8;text-align:center}
 .fstep .fn{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;font-family:"Zen Maru Gothic";font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:17px}
-.fstep:nth-child(2) .fn{background:var(--orange)} .fstep:nth-child(3) .fn{background:var(--teal)} .fstep:nth-child(4) .fn{background:var(--pink-d)}
+.fstep:nth-child(2) .fn{background:var(--orange)} .fstep:nth-child(3) .fn{background:var(--yellow);color:#6b4e12} .fstep:nth-child(4) .fn{background:var(--green-d)}
 .fstep h4{margin:0 0 6px;font-family:"Zen Maru Gothic";font-weight:700;font-size:16px}
 .fstep p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.7}
 .fstep::after{content:"›";position:absolute;right:-11px;top:28px;font-size:26px;color:var(--orange);font-weight:900;z-index:2}
@@ -342,7 +345,7 @@ h1.h1 .mk2{color:var(--teal-d)}
     <div class="hero-cta">
       <a class="btn big call" href="tel:05017903432"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>電話</a>
       <a class="btn big" href="#contact">お問い合わせ</a>
-      <p class="tel-hours">お電話でのご相談：平日11:00〜19:00</p>
+      <p class="tel-hours"><span class="th-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>平日 11:00〜19:00</p>
     </div>
   </div>
 </section>
@@ -523,7 +526,7 @@ h1.h1 .mk2{color:var(--teal-d)}
       <a class="btn big call" href="tel:05017903432"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>電話</a>
       <a class="btn big" href="#">お問い合わせ</a>
     </div>
-    <p class="tel-hours fc">お電話受付／平日11:00〜19:00</p>
+    <p class="tel-hours fc"><span class="th-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>平日 11:00〜19:00</p>
   </div>
 </section>
 
